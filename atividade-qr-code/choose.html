@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Links</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* =========================================
+   Variáveis de Cores e Paleta
+   ========================================= */
+:root {
+  --bg-color: hsl(212, 45%, 89%);      /* Slate 300 do seu guia original */
+  --white: #ffffff;
+  --text-main: hsl(218, 44%, 22%);    /* Slate 900 */
+  --text-muted: hsl(216, 15%, 48%);   /* Slate 500 */
+  
+  /* Cores dos botões */
+  --color-form: #673ab7;              /* Roxo temático do Google Forms */
+  --color-form-hover: #512da8;
+  --color-local: #2563eb;             /* Azul moderno para a página interna */
+  --color-local-hover: #1d4ed8;
+}
+
+/* =========================================
+   Reset Básico
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   Layout e Centralização (Body)
+   ========================================= */
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  padding: 1.5rem;
+}
+
+/* =========================================
+   Card/Painel Principal
+   ========================================= */
+.panel-container {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 360px;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.panel-container h1 {
+  color: var(--text-main);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.panel-container p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+/* =========================================
+   Grupo de Botões
+   ========================================= */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espaço entre os botões */
+}
+
+/* Estilo Base dos Botões */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.btn:active {
+  transform: scale(0.98); /* Efeito de clique físico */
+}
+
+/* Botão do Formulário */
+.btn-form {
+  background-color: var(--color-form);
+}
+
+.btn-form:hover {
+  background-color: var(--color-form-hover);
+}
+
+/* Botão Local */
+.btn-local {
+  background-color: var(--color-local);
+}
+
+.btn-local:hover {
+  background-color: var(--color-local-hover);
+}
+  </style>
+</head>
+<body>
+
+  <main class="panel-container">
+    <h1>Acesso Rápido</h1>
+    <p>Selecione uma das opções abaixo para prosseguir:</p>
+    
+    <div class="button-group">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLPjhMNF2kK4_ZhlI6fz6PUs_wSK7jsBpUwHGEd_qh9pwkgw/viewform" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn btn-form">
+        Responder Formulário
+      </a>
+
+      <a href="file:///C:/Users/Aluno/Pictures/curso/atividade-qr-code/boas-vindas/index.html" 
+         class="btn btn-local">
+        Página de Boas-Vindas
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>

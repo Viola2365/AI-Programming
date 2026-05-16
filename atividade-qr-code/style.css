@@ -1,0 +1,86 @@
+/* =========================================
+   Variáveis de Cores (Baseado no style-guide)
+   ========================================= */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+}
+
+/* =========================================
+   Reset Básico
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   Estilos Globais e Layout (Body)
+   ========================================= */
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  background-color: var(--slate-300);
+  
+  /* Centralizando o conteúdo na tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  /* Margem extra para telas muito pequenas */
+  padding: 1.5rem; 
+}
+
+/* =========================================
+   Componente: Card Principal
+   ========================================= */
+.card {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 320px; /* Largura fixa limitando em desktops, responsivo no mobile */
+  padding: 1rem;    /* Espaçamento interno em volta da imagem */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra suave igual ao design */
+  text-align: center;
+}
+
+/* =========================================
+   Imagem (QR Code)
+   ========================================= */
+.card-image-container {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden; /* Garante que a imagem respeite o border-radius */
+}
+
+.qr-code {
+  width: 100%;
+  display: block;
+}
+
+/* =========================================
+   Conteúdo de Texto
+   ========================================= */
+.card-content {
+  padding: 1.5rem 0.5rem 1.5rem 0.5rem; /* Espaçamento interno dos textos */
+}
+
+.card-content h1 {
+  color: var(--slate-900);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  color: var(--slate-500);
+  font-weight: 400;
+  font-size: 0.9375rem; /* 15px conforme style guide */
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
